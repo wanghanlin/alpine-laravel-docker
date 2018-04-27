@@ -2,5 +2,4 @@
 
 php artisan migrate --force
 
-crond
 supervisord
