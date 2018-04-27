@@ -26,6 +26,8 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
     php -r "unlink('composer-setup.php');" && \
     mv composer.phar /usr/local/bin/composer
     
+RUN npm install -g yarn && npm install -g svgo    
+
 ADD php.ini /etc/php7/php.ini
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD www.conf /etc/php7/php-fpm.d/www.conf
