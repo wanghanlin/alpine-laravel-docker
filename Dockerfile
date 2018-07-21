@@ -19,7 +19,7 @@ RUN apk --no-cache add \
 
 RUN apk --no-cache add bash curl git openssh-client nodejs nodejs-npm supervisor \
     jpegoptim optipng pngquant gifsicle libpng-dev autoconf automake build-base libtool file nasm \
-    nginx
+    nginx xvfb
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
