@@ -1,5 +1,5 @@
 # base image provide patched qt wkhtmltopdf out-of-box
-FROM surnet/alpine-wkhtmltopdf:3.9-0.12.5-full 
+FROM surnet/alpine-wkhtmltopdf:3.10-0.12.5-full
 
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
