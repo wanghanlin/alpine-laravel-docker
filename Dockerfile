@@ -121,7 +121,7 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && yarn --version
 
 
-RUN npm install -g yarn && npm install -g svgo    
+RUN npm install -g svgo    
 
 ADD php.ini /etc/php7/php.ini
 ADD nginx.conf /etc/nginx/nginx.conf
