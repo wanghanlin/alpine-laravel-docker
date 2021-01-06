@@ -11,11 +11,11 @@ RUN apk --no-cache add tzdata && \
     echo "UTC" | tee /etc/timezone && \
     apk del tzdata
 
- RUN apk --no-cache add \
-    php7@7.4.13-r1 php7-opcache@7.4.13-r1 php7-fpm@7.4.13-r1 php7-cgi@7.4.13-r1 php7-ctype@7.4.13-r1 php7-json@7.4.13-r1 php7-dom@7.4.13-r1 php7-zip@7.4.13-r1 php7-zip@7.4.13-r1 php7-gd \
-   @7.4.13-r1 php7-curl@7.4.13-r1 php7-mbstring@7.4.13-r1 php7-redis@7.4.13-r1 php7-mcrypt@7.4.13-r1 php7-posix@7.4.13-r1 php7-pdo_mysql@7.4.13-r1 php7-tokenizer@7.4.13-r1 php7-simplexml@7.4.13-r1 php7-session \
-   @7.4.13-r1 php7-xml@7.4.13-r1 php7-sockets@7.4.13-r1 php7-openssl@7.4.13-r1 php7-fileinfo@7.4.13-r1 php7-ldap@7.4.13-r1 php7-exif@7.4.13-r1 php7-pcntl@7.4.13-r1 php7-xmlwriter@7.4.13-r1 php7-phar@7.4.13-r1 php7-zlib \
-   @7.4.13-r1 php7-intl@7.4.13-r1 php7-gmp@7.4.13-r1 php7-iconv@7.4.13-r1 php7-bcmath@7.4.13-r1 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
+ RUN apk --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community add \
+    php7 php7-opcache php7-fpm php7-cgi php7-ctype php7-json php7-dom php7-zip php7-zip php7-gd \
+    php7-curl php7-mbstring php7-redis php7-mcrypt php7-posix php7-pdo_mysql php7-tokenizer php7-simplexml php7-session \
+    php7-xml php7-sockets php7-openssl php7-fileinfo php7-ldap php7-exif php7-pcntl php7-xmlwriter php7-phar php7-zlib \
+    php7-intl php7-gmp php7-iconv php7-bcmath
 
 RUN apk --no-cache add bash curl git openssh-client nodejs nodejs-npm supervisor \
     jpegoptim optipng pngquant gifsicle libpng-dev autoconf automake build-base libtool file nasm \
