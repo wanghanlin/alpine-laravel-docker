@@ -17,7 +17,7 @@ RUN apk --no-cache add tzdata && \
     php7-xml php7-sockets php7-openssl php7-fileinfo php7-ldap php7-exif php7-pcntl php7-xmlwriter php7-phar php7-zlib \
     php7-intl php7-gmp php7-iconv php7-bcmath
 
-RUN apk --no-cache add bash curl git openssh-client nodejs nodejs-npm supervisor \
+RUN apk --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main add bash curl git openssh-client nodejs nodejs-npm supervisor \
     jpegoptim optipng pngquant gifsicle libpng-dev autoconf automake build-base libtool file nasm \
     nginx xvfb
 
