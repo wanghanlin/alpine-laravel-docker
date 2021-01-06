@@ -19,7 +19,7 @@ RUN apk --no-cache add tzdata && \
 
 RUN apk --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main add bash curl git openssh-client nodejs npm supervisor \
     jpegoptim optipng pngquant gifsicle libpng-dev autoconf automake build-base libtool file nasm \
-    nginx xvfb libuv
+    nginx xvfb libuv g++
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
