@@ -21,6 +21,8 @@ RUN apk --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main a
     jpegoptim optipng pngquant gifsicle libpng-dev autoconf automake build-base libtool file nasm \
     nginx xvfb libuv g++
 
+RUN apk --no-cache add py3-setuptools
+
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
     php -r "unlink('composer-setup.php');" && \
